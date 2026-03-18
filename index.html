@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>คุณมิ้น 🌻</title>
+<title>พี่ปอโทคนเก่ง 🌻</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400;500;600;700&family=Mitr:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -35,7 +35,6 @@
     cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='5' fill='%23FFCC00' stroke='%235C3A1E' stroke-width='1.5'/%3E%3C/svg%3E") 12 12, auto;
   }
 
-  /* Dot pattern bg */
   body::before {
     content: '';
     position: fixed;
@@ -49,7 +48,6 @@
     z-index: 0;
   }
 
-  /* Floating background sunflowers */
   .bg-flowers {
     position: fixed;
     inset: 0;
@@ -70,7 +68,6 @@
     50%       { transform: rotate(calc(var(--rot, -5deg) * -1)) scale(1.05); }
   }
 
-  /* ===== MAIN LAYOUT ===== */
   .page {
     position: relative;
     z-index: 1;
@@ -80,14 +77,17 @@
     text-align: center;
   }
 
-  /* ===== HERO SUNFLOWER ===== */
   .hero-flower {
     display: flex;
     justify-content: center;
     margin-bottom: 4px;
-    animation: heroSway 5s ease-in-out infinite;
     transform-origin: bottom center;
     filter: drop-shadow(0 8px 24px #FFCC0040);
+  }
+
+  /* .sway ถูกเพิ่มโดย JS หลัง fadeUp เสร็จ */
+  .hero-flower.sway {
+    animation: heroSway 5s ease-in-out infinite;
   }
 
   @keyframes heroSway {
@@ -95,7 +95,6 @@
     50%       { transform: rotate(3deg); }
   }
 
-  /* ===== TITLE ===== */
   .badge {
     display: inline-block;
     background: var(--y2);
@@ -133,7 +132,6 @@
     letter-spacing: 0.03em;
   }
 
-  /* ===== CARD ===== */
   .card {
     background: var(--white);
     border-radius: 28px;
@@ -174,7 +172,6 @@
     line-height: 1.85;
   }
 
-  /* Stars / tags */
   .tags {
     display: flex;
     flex-wrap: wrap;
@@ -195,7 +192,6 @@
     border: 1px solid var(--y2);
   }
 
-  /* ===== PINK BUTTON ===== */
   .btn-section {
     margin: 8px 0 4px;
   }
@@ -249,7 +245,6 @@
     opacity: 0.7;
   }
 
-  /* ===== PARTICLE SYSTEM ===== */
   #particles {
     position: fixed;
     inset: 0;
@@ -268,25 +263,12 @@
   }
 
   @keyframes particleFly {
-    0%   {
-      opacity: 1;
-      transform: translate(0, 0) scale(0.3) rotate(var(--rot0, 0deg));
-    }
-    20%  {
-      opacity: 1;
-      transform: translate(var(--dx20, 0px), var(--dy20, -40px)) scale(1.3) rotate(var(--rot20, 10deg));
-    }
-    60%  {
-      opacity: 0.9;
-      transform: translate(var(--dx60, 0px), var(--dy60, -120px)) scale(1.1) rotate(var(--rot60, -5deg));
-    }
-    100% {
-      opacity: 0;
-      transform: translate(var(--dx, 0px), var(--dy, -260px)) scale(0.5) rotate(var(--rot, 20deg));
-    }
+    0%   { opacity: 1; transform: translate(0, 0) scale(0.3) rotate(var(--rot0, 0deg)); }
+    20%  { opacity: 1; transform: translate(var(--dx20, 0px), var(--dy20, -40px)) scale(1.3) rotate(var(--rot20, 10deg)); }
+    60%  { opacity: 0.9; transform: translate(var(--dx60, 0px), var(--dy60, -120px)) scale(1.1) rotate(var(--rot60, -5deg)); }
+    100% { opacity: 0; transform: translate(var(--dx, 0px), var(--dy, -260px)) scale(0.5) rotate(var(--rot, 20deg)); }
   }
 
-  /* ===== FOOTER ===== */
   .footer {
     font-size: 13px;
     color: var(--brown-light);
@@ -294,7 +276,6 @@
     margin-top: 40px;
   }
 
-  /* ===== PAGE LOAD ANIMATION ===== */
   .page > * {
     animation: fadeUp 0.6s ease-out both;
   }
@@ -318,34 +299,23 @@
 </head>
 <body>
 
-<!-- Background decorative flowers -->
 <div class="bg-flowers">
   <svg class="bg-flower" style="width:200px;top:5%;left:-2%;--dur:7s;--delay:0s;--rot:-8deg" viewBox="0 0 100 130"><g transform="translate(50,50)"><ellipse cy="-22" rx="6" ry="12" fill="#FFCC00" transform="rotate(0)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFE566" transform="rotate(30)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFCC00" transform="rotate(60)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFE566" transform="rotate(90)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFCC00" transform="rotate(120)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFE566" transform="rotate(150)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFCC00" transform="rotate(180)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFE566" transform="rotate(210)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFCC00" transform="rotate(240)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFE566" transform="rotate(270)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFCC00" transform="rotate(300)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFE566" transform="rotate(330)"/><circle r="14" fill="#5C3A1E"/></g><line x1="50" y1="50" x2="50" y2="125" stroke="#4A7C3F" stroke-width="4" stroke-linecap="round"/></svg>
-
   <svg class="bg-flower" style="width:160px;top:30%;right:-1%;--dur:9s;--delay:1s;--rot:6deg" viewBox="0 0 100 130"><g transform="translate(50,50)"><ellipse cy="-22" rx="6" ry="12" fill="#FFCC00" transform="rotate(0)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFE566" transform="rotate(40)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFCC00" transform="rotate(80)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFE566" transform="rotate(120)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFCC00" transform="rotate(160)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFE566" transform="rotate(200)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFCC00" transform="rotate(240)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFE566" transform="rotate(280)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFCC00" transform="rotate(320)"/><circle r="13" fill="#5C3A1E"/></g><line x1="50" y1="50" x2="50" y2="125" stroke="#4A7C3F" stroke-width="4" stroke-linecap="round"/></svg>
-
   <svg class="bg-flower" style="width:180px;bottom:10%;left:5%;--dur:8s;--delay:2s;--rot:-4deg" viewBox="0 0 100 130"><g transform="translate(50,50)"><ellipse cy="-22" rx="6" ry="12" fill="#FFE566" transform="rotate(0)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFCC00" transform="rotate(36)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFE566" transform="rotate(72)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFCC00" transform="rotate(108)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFE566" transform="rotate(144)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFCC00" transform="rotate(180)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFE566" transform="rotate(216)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFCC00" transform="rotate(252)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFE566" transform="rotate(288)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFCC00" transform="rotate(324)"/><circle r="14" fill="#3E2510"/></g><line x1="50" y1="50" x2="50" y2="125" stroke="#6AAB5A" stroke-width="4" stroke-linecap="round"/></svg>
-
   <svg class="bg-flower" style="width:140px;bottom:25%;right:3%;--dur:10s;--delay:3s;--rot:10deg" viewBox="0 0 100 130"><g transform="translate(50,50)"><ellipse cy="-22" rx="6" ry="12" fill="#FFCC00" transform="rotate(0)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFE566" transform="rotate(45)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFCC00" transform="rotate(90)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFE566" transform="rotate(135)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFCC00" transform="rotate(180)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFE566" transform="rotate(225)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFCC00" transform="rotate(270)"/><ellipse cy="-22" rx="6" ry="12" fill="#FFE566" transform="rotate(315)"/><circle r="12" fill="#5C3A1E"/></g><line x1="50" y1="50" x2="50" y2="125" stroke="#4A7C3F" stroke-width="4" stroke-linecap="round"/></svg>
 </div>
 
-<!-- Particle container -->
 <div id="particles"></div>
 
 <div class="page">
-
-  <!-- Hero Sunflower -->
-  <div class="hero-flower">
+  <div class="hero-flower" id="heroFlower">
     <svg width="160" height="210" viewBox="0 0 160 210" fill="none">
-      <!-- Stem -->
       <path d="M80 200 Q74 168 76 138 Q80 108 78 80" stroke="#4A7C3F" stroke-width="6" stroke-linecap="round" fill="none"/>
-      <!-- Leaf left -->
       <path d="M77 155 Q50 142 44 124 Q62 128 77 142Z" fill="#6AAB5A"/>
       <path d="M77 155 Q50 142 44 124" stroke="#4A7C3F" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-      <!-- Leaf right -->
       <path d="M79 128 Q106 115 114 96 Q96 103 79 118Z" fill="#4A7C3F"/>
       <path d="M79 128 Q106 115 114 96" stroke="#3A6030" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-      <!-- Petals outer -->
       <g transform="translate(80,68)">
         <ellipse cy="-32" rx="8" ry="16" fill="#FFCC00" transform="rotate(0)"/>
         <ellipse cy="-32" rx="8" ry="16" fill="#FFD930" transform="rotate(30)"/>
@@ -359,10 +329,8 @@
         <ellipse cy="-32" rx="8" ry="16" fill="#FFCC00" transform="rotate(270)"/>
         <ellipse cy="-32" rx="8" ry="16" fill="#FFD930" transform="rotate(300)"/>
         <ellipse cy="-32" rx="8" ry="16" fill="#FFE566" transform="rotate(330)"/>
-        <!-- Center -->
         <circle r="20" fill="#5C3A1E"/>
         <circle r="17" fill="#3E2510"/>
-        <!-- Seed dots -->
         <circle cx="-5" cy="-6" r="2.5" fill="#7A5030" opacity="0.7"/>
         <circle cx="5" cy="-6" r="2.5" fill="#7A5030" opacity="0.7"/>
         <circle cx="0" cy="4" r="2.5" fill="#7A5030" opacity="0.7"/>
@@ -375,12 +343,10 @@
     </svg>
   </div>
 
-  <!-- Title -->
   <h1 class="hero-title">
     พี่ปอ<span>โทคนเก่ง</span><br>ของเค้า 🌟
   </h1>
 
-  <!-- Button -->
   <div class="btn-section">
     <button class="heart-btn" id="loveBtn" onclick="spawnParticles(event)">
       <span class="btn-icon">💖</span>
@@ -389,14 +355,17 @@
     </button>
   </div>
 
-  <!-- Footer -->
   <div class="footer">made with 💛 by Me :)</div>
-
 </div>
 
 <script>
-  const particles = ['💖','💗','💕','🩷','💓','💞','❤️','🩷','💖','💗','💕','💓'];
+  // fadeUp เสร็จแล้วค่อยแกว่ง — ไม่ conflict กัน
+  const heroFlower = document.getElementById('heroFlower');
+  heroFlower.addEventListener('animationend', () => {
+    heroFlower.classList.add('sway');
+  }, { once: true });
 
+  const particles = ['💖','💗','💕','🩷','💓','💞','❤️','🩷','💖','💗','💕','💓'];
   function rand(min, max) { return Math.random() * (max - min) + min; }
 
   function spawnParticles(e) {
@@ -405,52 +374,33 @@
     const cx = rect.left + rect.width / 2;
     const cy = rect.top + rect.height / 2;
     const container = document.getElementById('particles');
-    const count = 20;
 
-    for (let i = 0; i < count; i++) {
+    for (let i = 0; i < 20; i++) {
       setTimeout(() => {
         const el = document.createElement('div');
         el.className = 'particle';
-
-        const emoji = particles[Math.floor(Math.random() * particles.length)];
-        el.textContent = emoji;
-
-        const size = rand(18, 34);
-        const dur = rand(1.2, 2.0);
-        const dx = rand(-160, 160);
-        const dy = rand(-280, -180);
-        const rot0 = rand(-30, 30);
-        const rot = rand(-60, 60);
-
+        el.textContent = particles[Math.floor(Math.random() * particles.length)];
+        const size = rand(18, 34), dur = rand(1.2, 2.0);
+        const dx = rand(-160, 160), dy = rand(-280, -180);
+        const rot0 = rand(-30, 30), rot = rand(-60, 60);
         el.style.cssText = `
-          left: ${cx}px;
-          top: ${cy}px;
-          --size: ${size}px;
-          --dur: ${dur}s;
+          left: ${cx}px; top: ${cy}px;
+          --size: ${size}px; --dur: ${dur}s;
           --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
-          --dx20: ${dx * 0.2}px;
-          --dy20: ${rand(-30, -60)}px;
-          --dx60: ${dx * 0.7}px;
-          --dy60: ${dy * 0.55}px;
-          --dx: ${dx}px;
-          --dy: ${dy}px;
-          --rot0: ${rot0}deg;
-          --rot20: ${rot0 + rand(-15,15)}deg;
-          --rot60: ${rot * 0.6}deg;
-          --rot: ${rot}deg;
+          --dx20: ${dx * 0.2}px; --dy20: ${rand(-30, -60)}px;
+          --dx60: ${dx * 0.7}px; --dy60: ${dy * 0.55}px;
+          --dx: ${dx}px; --dy: ${dy}px;
+          --rot0: ${rot0}deg; --rot20: ${rot0 + rand(-15,15)}deg;
+          --rot60: ${rot * 0.6}deg; --rot: ${rot}deg;
           transform-origin: center center;
         `;
-
         container.appendChild(el);
         setTimeout(() => el.remove(), dur * 1000 + 100);
       }, i * 55);
     }
 
-    // Button bounce effect
     btn.style.transform = 'translateY(3px) scale(0.96)';
-    setTimeout(() => {
-      btn.style.transform = '';
-    }, 150);
+    setTimeout(() => { btn.style.transform = ''; }, 150);
   }
 </script>
 </body>
